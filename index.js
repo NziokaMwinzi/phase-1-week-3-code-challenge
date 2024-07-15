@@ -1,8 +1,11 @@
+    //referenced the html elemments using their id's
     const itemInput = document.getElementById('input');
     const addButton = document.getElementById('add');
     const clearButton = document.getElementById('clear');
     const shoppingListContainer = document.getElementById('list-container');
+    //created an empty array to store the list items
     let shoppingList = [];
+    //created a function to add the items to the list
     const updateList = () => {
         shoppingListContainer.innerHTML = '';
         shoppingList.forEach((item, index) => {
@@ -20,7 +23,7 @@
             shoppingListContainer.appendChild(listItem);
         });
     };
-
+//created event listeners for the add and clear buttons
     addButton.addEventListener('click', () => {
         const newItemText = itemInput.value;
         if (newItemText) {
